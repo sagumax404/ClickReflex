@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClickReflex</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button class="GameName" >ClickReflex</button>
+    <button id="toggle-sound" class="sound-toggle">Ses kapa</button>
+    <audio id="pop" src="sounds/POP.mp3"></audio>
+    <audio id="highest-score-sound" src="sounds/Highest_Score.mp3"></audio>
+
+    <div id="start-screen"  style="display:block">
+    <button onclick="startGame()" class="start-button" id="start-game">Oyna</button>
+    </div>
+    <div id="restart-screen"  style="display:none">
+        <button  id="restart" class="restart-button">Tekrar Oyna</button>
+        </div>
+    <div>
+        <p id="highest-scoree" style="display: none;">En Yüksek Skor:</span></p>
+    </div>
+    <div>
+        <p id="score" style="display: none;"></p>
+    </div>
+    <button id="how-to-play-button" class="how-to-play-button">Nasıl Oynanır?</button>
+    <div id="how-to-play" style="display:none">
+        <h1 style="text-align: center;">Nasıl Oynanır?</h1>
+            <div>
+                <img src="balls/mor.gif" width="100" height="50" class="balls">
+                <p>Oyuna 3 tane topla başlanır. Toplara tıklandığında rengine göre farklı puanlar kazanılır. </p>
+            </div>
+            <div >
+                <img src="balls/mavi.gif" width="100" height="50" class="balls">
+                <p>Kırmızı top 5,pembe top 10, mavi top 15 puan kazandırır. Buna oranla en hızlı ekrandan kaybolan top en çok puan getiren toptur.</p>
+            </div>
+            <img src="balls/kırmızı.gif" width="100" height="50" class="balls">
+            <p>Ekranda top kalmayıncaya dek oyun devam eder.</p>
+            
+    </div>
+    
+    <canvas id="canvas" width="1500" height="650" class="canvas" >
+    </canvas>
+    <script src="index.js"></script>
+    
+</body>
+</html>
