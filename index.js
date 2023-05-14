@@ -49,8 +49,8 @@ function startGame() {
   
   function addBall() {//Math.random fonksiyonundan gelen veriye göre topun renginin belirlendiği ve ball dizisine eklendiği fonksiyon
     ball_color=Math.random()*10;
-    console.log(ball_color)
-    if(ball_color<5){
+    console.log(ball_color);
+    if(ball_color<4){
       ball_color="red";
     }
     else if(ball_color<8)
@@ -84,17 +84,88 @@ function startGame() {
       if (ball.radius <= 0) {//topun yarıçapı 0'a eşit olursa top siliniyor
         removeBall(ball);
       }
-      else {//değilse topun rengine göre yarıçapının azalma oranı belirlenir
+      else {//değilse topun rengine göre yarıçapının skora göre azalma oranı belirlenir
         ctx.beginPath();
         ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
         if (ball.color == "red") {
-          ball.radius -= 0.25;
+          if(score<100){
+            ball.radius -= 0.2;
+          }
+          else if(score>100 && score<200){
+            ball.radius -= 0.25;
+            console.log("score 100 den fazla");
+          }
+          else if(score>200 && score<300){
+            ball.radius -=0.30;
+          }
+          else if(score>300 && score<400){
+            ball.radius -= 0.35;
+          }
+          else if(score>400 && score<500){
+            ball.radius -=0.38;
+          }
+          else if(score>500 && score<600){
+            ball.radius -=0.42;
+          }
+          else if(score>600 && score<700){
+            ball.radius -=0.45;
+          }
+          else{
+            ball.radius -= 0.48;
+          }
           ctx.fillStyle = "red";
         } else if (ball.color == "purple") {
-          ball.radius -= 0.3;
+          if(score<100){
+            ball.radius -= 0.3;
+          }
+          else if(score>100 && score<200){
+            ball.radius -= 0.35;
+          }
+          else if(score>200 && score<300){
+            ball.radius -=0.4;
+          }
+          else if(score>300 && score<400){
+            ball.radius -= 0.45;
+          }
+          else if(score>400 && score<500){
+            ball.radius -=0.48;
+          }
+          else if(score>500 && score<600){
+            ball.radius -=0.52;
+          }
+          else if(score>600 && score<700){
+            ball.radius -=0.55;
+          }
+          else{
+            ball.radius -= 0.58;
+          }
           ctx.fillStyle = "purple";
         } else if (ball.color == "blue") {
-          ball.radius -= 0.5;
+          if(score<100){
+            ball.radius -= 0.4;
+          }
+          else if(score>100 && score<200){
+            ball.radius -= 0.45;
+            console.log("score 100 den fazla");
+          }
+          else if(score>200 && score<300){
+            ball.radius -=0.5;
+          }
+          else if(score>300 && score<400){
+            ball.radius -= 0.55;
+          }
+          else if(score>400 && score<500){
+            ball.radius -=0.58;
+          }
+          else if(score>500 && score<600){
+            ball.radius -=0.62;
+          }
+          else if(score>600 && score<700){
+            ball.radius -=0.65;
+          }
+          else{
+            ball.radius -= 0.68;
+          }
           ctx.fillStyle = "blue";
         }
         ctx.fill();

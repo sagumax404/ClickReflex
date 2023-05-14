@@ -92,7 +92,7 @@ p{
 .canvas{
     display: none;
     border-style: dotted;
-    border-color: black;
+    border-color: rgb(255, 0, 0);
 }
 
 .sound-toggle{
