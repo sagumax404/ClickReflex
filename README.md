@@ -8,7 +8,7 @@
 ## How to Play?
 - Its simple to play click on the balls that appear on the screen and destroy them.
 - For this you have to own one thing. For Desktop  mouse, other platforms clickable  screen. 
-![Game Layout](https://sagumax404.github.io/ClickReflex/master/img/gameplay.gif)
+![Game Layout](img/gameplay.gif)
 
 ## Play
 For best experience play on desktop. [Play](https://sagumax404.github.io/ClickReflex/)
