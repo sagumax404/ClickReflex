@@ -46,6 +46,7 @@ function startGame() {
   toggleScreen('how-to-play-button',false);
   toggleScreen("how-to-play",false);
   toggleScreen("score",false);
+  toggleScreen("accuracy",false);
   
   function addBall() {//Math.random fonksiyonundan gelen veriye göre topun renginin belirlendiği ve ball dizisine eklendiği fonksiyon
     ball_color=Math.random()*10;
@@ -196,14 +197,18 @@ function startGame() {
         localStorage.setItem('highestScore', score); // Yeni highest score'u local storage'a kaydeder
         highestScore = score;
         document.getElementById('highest-scoree').innerHTML = "Yeni En Yüksek Skor:"+highestScore;
+        document.getElementById("accuracy").innerHTML = accuracy;
         toggleScreen("highest-scoree",true);
+        toggleScreen("accuracy",true);
         NewHighestScoreSound.play();
         console.log(highestScore);
       }
       else if(score<highestScore){//yeni en yüksek skor yapılmadıysa düz skor yazdırılır
         console.log(score);
         document.getElementById('score').innerHTML = "Skorun:"+score;
+        document.getElementById("accuracy").innerHTML = "Doğruluk Yüzdesi:"+accuracy+"%";
         toggleScreen("score",true);
+        toggleScreen("accuracy",true);
       }
       else{
         console.log("brrrrrrrr");
