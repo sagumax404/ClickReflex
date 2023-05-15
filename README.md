@@ -15,5 +15,5 @@ This game inspired by [Aimlabs](https://aimlab.gg)
 For best experience play on desktop. [Play](https://sagumax404.github.io/ClickReflex/)
 
 ## Gameplay Video
-[![GamePlay](https://www.youtube.com/watch?v=-3TzEj14GpE/0.jpg)](https://www.youtube.com/watch?v=-3TzEj14GpE)  
+[![GamePlay](img/gameplay.png)](https://www.youtube.com/watch?v=-3TzEj14GpE)  
 
