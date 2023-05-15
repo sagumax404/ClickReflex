@@ -197,7 +197,7 @@ function startGame() {
         localStorage.setItem('highestScore', score); // Yeni highest score'u local storage'a kaydeder
         highestScore = score;
         document.getElementById('highest-scoree').innerHTML = "Yeni En Yüksek Skor:"+highestScore;
-        document.getElementById("accuracy").innerHTML = accuracy;
+        document.getElementById("accuracy").innerHTML = "Doğruluk Yüzdesi:"+accuracy+"%";
         toggleScreen("highest-scoree",true);
         toggleScreen("accuracy",true);
         NewHighestScoreSound.play();
