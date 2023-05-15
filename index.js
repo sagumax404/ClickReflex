@@ -46,7 +46,7 @@ function startGame() {
   toggleScreen('how-to-play-button',false);
   toggleScreen("how-to-play",false);
   toggleScreen("score",false);
-  toggleScreen("accuracy",false);
+  //toggleScreen("accuracy",false);
   
   function addBall() {//Math.random fonksiyonundan gelen veriye göre topun renginin belirlendiği ve ball dizisine eklendiği fonksiyon
     ball_color=Math.random()*10;
